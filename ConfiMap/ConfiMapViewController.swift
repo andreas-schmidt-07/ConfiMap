@@ -8,7 +8,7 @@
 
 import UIKit
 import MapKit
-
+import SFProgressCircle
 
 class ConfiMapViewController: UIViewController {
     
@@ -26,7 +26,14 @@ class ConfiMapViewController: UIViewController {
     
     @IBOutlet var overlayView: UIView!
     
+    @IBOutlet var progressCircle: SFCircleGradientView!
+    @IBOutlet var countdown: UILabel!
+    
+    var timer: Timer?
+    
     var counter = 0
+    
+    var progress = 1.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +56,7 @@ class ConfiMapViewController: UIViewController {
         let sosGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.sosTapped))
         self.imgSOS.addGestureRecognizer(sosGestureRecognizer)
         
-        let closeOverlayGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.sosTapped))
+        let closeOverlayGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.hideSOS))
         self.overlayView.addGestureRecognizer(closeOverlayGestureRecognizer)
         
     }
@@ -108,12 +115,20 @@ class ConfiMapViewController: UIViewController {
         
         // Two police stations
         let police1 = Police()
-        police1.coordinate = CLLocationCoordinate2DMake(52.523181, 13.414269)
+        police1.coordinate = CLLocationCoordinate2DMake(52.522581, 13.414269)
         self.mapView.addAnnotation(police1)
         
         let police2 = Police()
         police2.coordinate = CLLocationCoordinate2DMake(52.519981, 13.411169)
         self.mapView.addAnnotation(police2)
+    }
+    
+    @objc func hideSOS() {
+        self.overlayView.isHidden = true
+        if let timer = self.timer {
+            timer.invalidate()
+            self.timer = nil
+        }
     }
     
     @objc func closeSheet() {
@@ -139,8 +154,37 @@ class ConfiMapViewController: UIViewController {
         }
     }
     
+    @IBAction func cancelAction(_ sender: Any) {
+        self.hideSOS()
+    }
+    
+    @IBAction func callAction(_ sender: Any) {
+        self.hideSOS()
+    }
+    
     @objc func sosTapped() {
-        self.overlayView.isHidden = !self.overlayView.isHidden
+        if self.overlayView.isHidden {
+            self.progress = 1
+            self.countdown.text = "20"
+            self.progressCircle.setProgress(CGFloat(self.progress), animateWithDuration: 0)
+            self.progressCircle.endColor = UIColor.green
+            self.progressCircle.startColor = UIColor.red
+            self.progressCircle.lineWidth = 8
+            
+            self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {[weak self] _ in
+                
+                if (self?.progress ?? 1) <= 0 {
+                    self?.hideSOS()
+                }
+                
+                self?.progress = (self?.progress ?? 1) - 0.05
+                let valueInSeconds = (self?.progress ?? 1) * 100 / 5
+                self?.countdown.text = String(format: "%d", Int(valueInSeconds))
+                self?.progressCircle.setProgress(CGFloat(self?.progress ?? 1), animateWithDuration: 1)
+                
+            })
+            self.overlayView.isHidden = false
+        }
     }
     
     @IBAction func locateMe(_ sender: Any) {

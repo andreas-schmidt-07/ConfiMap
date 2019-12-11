@@ -18,6 +18,7 @@
 		282D3E5A23A0D15700C08FA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 282D3E5923A0D15700C08FA2 /* Main.storyboard */; };
 		282D3E5D23A0D4EA00C08FA2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282D3E5C23A0D4EA00C08FA2 /* MapKit.framework */; };
 		282D3E5F23A0E62200C08FA2 /* Annotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282D3E5E23A0E62200C08FA2 /* Annotations.swift */; };
+		6A56AF548D0875EAD7185723 /* Pods_Standard_ConfiMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFCEE2427F7F42137743C241 /* Pods_Standard_ConfiMap.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02B742C7C6138732E7F6259A /* Pods-Standard-ConfiMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Standard-ConfiMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-Standard-ConfiMap/Pods-Standard-ConfiMap.release.xcconfig"; sourceTree = "<group>"; };
+		099566AAEE3824E49CF52715 /* Pods-Standard-ConfiMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Standard-ConfiMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Standard-ConfiMap/Pods-Standard-ConfiMap.debug.xcconfig"; sourceTree = "<group>"; };
 		282D3E2423A0CFF000C08FA2 /* ConfiMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConfiMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		282D3E2723A0CFF000C08FA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		282D3E2923A0CFF000C08FA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +58,7 @@
 		282D3E5923A0D15700C08FA2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		282D3E5C23A0D4EA00C08FA2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		282D3E5E23A0E62200C08FA2 /* Annotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotations.swift; sourceTree = "<group>"; };
+		DFCEE2427F7F42137743C241 /* Pods_Standard_ConfiMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Standard_ConfiMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				282D3E5D23A0D4EA00C08FA2 /* MapKit.framework in Frameworks */,
+				6A56AF548D0875EAD7185723 /* Pods_Standard_ConfiMap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +96,7 @@
 				282D3E4823A0CFF300C08FA2 /* ConfiMapUITests */,
 				282D3E2523A0CFF000C08FA2 /* Products */,
 				282D3E5B23A0D4EA00C08FA2 /* Frameworks */,
+				5B44994FC33424C027FCDF7F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,8 +156,18 @@
 			isa = PBXGroup;
 			children = (
 				282D3E5C23A0D4EA00C08FA2 /* MapKit.framework */,
+				DFCEE2427F7F42137743C241 /* Pods_Standard_ConfiMap.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B44994FC33424C027FCDF7F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				099566AAEE3824E49CF52715 /* Pods-Standard-ConfiMap.debug.xcconfig */,
+				02B742C7C6138732E7F6259A /* Pods-Standard-ConfiMap.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,9 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 282D3E4E23A0CFF300C08FA2 /* Build configuration list for PBXNativeTarget "ConfiMap" */;
 			buildPhases = (
+				D1FA4AC25542E91FE896F1FD /* [CP] Check Pods Manifest.lock */,
 				282D3E2023A0CFF000C08FA2 /* Sources */,
 				282D3E2123A0CFF000C08FA2 /* Frameworks */,
 				282D3E2223A0CFF000C08FA2 /* Resources */,
+				C0E36A52013DA6078D7B71C4 /* [CP] Embed Pods Frameworks */,
+				381B0C4BACBF888F67439ABC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -280,6 +299,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		381B0C4BACBF888F67439ABC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Standard-ConfiMap/Pods-Standard-ConfiMap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0E36A52013DA6078D7B71C4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Standard-ConfiMap/Pods-Standard-ConfiMap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1FA4AC25542E91FE896F1FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		282D3E2023A0CFF000C08FA2 /* Sources */ = {
@@ -452,16 +519,14 @@
 		};
 		282D3E4F23A0CFF300C08FA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 099566AAEE3824E49CF52715 /* Pods-Standard-ConfiMap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"ConfiMap/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ConfiMap/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tsystems.mms.ConfiMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -471,16 +536,14 @@
 		};
 		282D3E5023A0CFF300C08FA2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02B742C7C6138732E7F6259A /* Pods-Standard-ConfiMap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"ConfiMap/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ConfiMap/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tsystems.mms.ConfiMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -496,11 +559,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ConfiMapTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tsystems.mms.ConfiMapTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -517,11 +576,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ConfiMapTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tsystems.mms.ConfiMapTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -536,11 +591,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ConfiMapUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tsystems.mms.ConfiMapUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -555,11 +606,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ConfiMapUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tsystems.mms.ConfiMapUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

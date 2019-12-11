@@ -20,7 +20,7 @@
                                 <viewLayoutGuide key="safeArea" id="Lls-xL-SLE"/>
                             </mapView>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nextSafeSpot" translatesAutoresizingMaskIntoConstraints="NO" id="qiw-dN-NxP" userLabel="NextSafeSpot">
-                                <rect key="frame" x="12" y="56" width="390" height="94"/>
+                                <rect key="frame" x="12" y="56" width="390" height="188"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yJa-cA-BRW" userLabel="Shop">
                                 <rect key="frame" x="0.0" y="862" width="414" height="262"/>
@@ -34,7 +34,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="close" translatesAutoresizingMaskIntoConstraints="NO" id="IdL-DM-mRX">
-                                        <rect key="frame" x="377" y="12" width="25" height="25"/>
+                                        <rect key="frame" x="352" y="12" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="IdL-DM-mRX" secondAttribute="height" multiplier="1:1" id="IKu-zn-YOZ"/>
                                         </constraints>
@@ -65,13 +65,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep calm. This app is with you. Watch out for safe spots nearby like shops or bars." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNC-XU-DY2">
-                                                <rect key="frame" x="62" y="9.5" width="324" height="61"/>
+                                                <rect key="frame" x="100" y="9.5" width="286" height="61"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="ey6-Db-ASE">
-                                                <rect key="frame" x="12" y="21" width="38" height="38"/>
+                                                <rect key="frame" x="12" y="2" width="76" height="76"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="ey6-Db-ASE" secondAttribute="height" multiplier="1:1" id="b5Y-Rn-Vvx"/>
                                                 </constraints>
@@ -108,16 +108,16 @@
                                 <rect key="frame" x="0.0" y="676" width="414" height="90"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="bEf-p1-VSC" userLabel="Gradient">
-                                        <rect key="frame" x="0.0" y="24" width="414.00000000000006" height="66"/>
+                                        <rect key="frame" x="0.0" y="24" width="414" height="66"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sos" translatesAutoresizingMaskIntoConstraints="NO" id="xFy-HV-4OF">
-                                        <rect key="frame" x="155" y="-7" width="104" height="104"/>
+                                        <rect key="frame" x="103" y="-59" width="208" height="208"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="xFy-HV-4OF" secondAttribute="height" multiplier="1:1" id="TMJ-Nv-0uZ"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSt-I6-QUZ">
-                                        <rect key="frame" x="338" y="11" width="68" height="68"/>
+                                        <rect key="frame" x="270" y="-23" width="136" height="136"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="PSt-I6-QUZ" secondAttribute="height" multiplier="1:1" id="tN3-fV-Br9"/>
                                         </constraints>
@@ -145,10 +145,58 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rOV-kU-5lB">
                                         <rect key="frame" x="57" y="219" width="300" height="400"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="As soon the countdown has ended an emergency call will be initiated." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Se-rN-DM7">
+                                                <rect key="frame" x="8" y="8" width="284" height="41"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ay-7q-pcE" userLabel="countdown">
+                                                <rect key="frame" x="129" y="153.5" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BNY-7U-5gd" userLabel="Progress" customClass="SFCircleGradientView">
+                                                <rect key="frame" x="50" y="64" width="200" height="200"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="DXT-hA-Vcd"/>
+                                                    <constraint firstAttribute="width" constant="200" id="omO-RE-oLw"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OC7-pe-3Vd">
+                                                <rect key="frame" x="93.5" y="288" width="113" height="30"/>
+                                                <state key="normal" title="Call immediately"/>
+                                                <connections>
+                                                    <action selector="callAction:" destination="c2U-Hi-eyH" eventType="touchUpInside" id="VXh-uT-tFG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDe-ka-hnu">
+                                                <rect key="frame" x="126" y="342" width="48" height="30"/>
+                                                <state key="normal" title="Cancel"/>
+                                                <connections>
+                                                    <action selector="cancelAction:" destination="c2U-Hi-eyH" eventType="touchUpInside" id="Ff1-ge-GGp"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
+                                            <constraint firstItem="9ay-7q-pcE" firstAttribute="centerX" secondItem="BNY-7U-5gd" secondAttribute="centerX" id="3Kz-of-Ddb"/>
+                                            <constraint firstItem="9ay-7q-pcE" firstAttribute="centerY" secondItem="BNY-7U-5gd" secondAttribute="centerY" id="4f4-hc-HtZ"/>
+                                            <constraint firstItem="OC7-pe-3Vd" firstAttribute="top" secondItem="BNY-7U-5gd" secondAttribute="bottom" constant="24" id="AHt-p8-9rO"/>
+                                            <constraint firstItem="ZDe-ka-hnu" firstAttribute="centerX" secondItem="rOV-kU-5lB" secondAttribute="centerX" id="NZo-7Y-aWM"/>
+                                            <constraint firstItem="BNY-7U-5gd" firstAttribute="leading" secondItem="rOV-kU-5lB" secondAttribute="leading" constant="50" id="OSm-Fi-2x4"/>
+                                            <constraint firstAttribute="trailing" secondItem="BNY-7U-5gd" secondAttribute="trailing" constant="50" id="PPJ-S5-FbG"/>
+                                            <constraint firstItem="2Se-rN-DM7" firstAttribute="leading" secondItem="rOV-kU-5lB" secondAttribute="leading" constant="8" id="PXC-xy-pqh"/>
+                                            <constraint firstItem="BNY-7U-5gd" firstAttribute="top" secondItem="rOV-kU-5lB" secondAttribute="top" constant="64" id="PhG-fp-mqO"/>
+                                            <constraint firstItem="ZDe-ka-hnu" firstAttribute="top" secondItem="OC7-pe-3Vd" secondAttribute="bottom" constant="24" id="TTH-xc-gh8"/>
+                                            <constraint firstItem="OC7-pe-3Vd" firstAttribute="centerX" secondItem="rOV-kU-5lB" secondAttribute="centerX" id="Y7T-jh-HuL"/>
                                             <constraint firstAttribute="width" constant="300" id="bJ8-rz-ldG"/>
                                             <constraint firstAttribute="height" constant="400" id="gmP-ea-jFa"/>
+                                            <constraint firstAttribute="trailing" secondItem="2Se-rN-DM7" secondAttribute="trailing" constant="8" id="oOe-cF-SrQ"/>
+                                            <constraint firstItem="2Se-rN-DM7" firstAttribute="top" secondItem="rOV-kU-5lB" secondAttribute="top" constant="8" id="uhA-bn-Nvi"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -187,12 +235,14 @@
                     <navigationItem key="navigationItem" id="603-1z-Zdt"/>
                     <connections>
                         <outlet property="closeICon" destination="IdL-DM-mRX" id="1Ca-kJ-vyA"/>
+                        <outlet property="countdown" destination="9ay-7q-pcE" id="ETF-SH-F59"/>
                         <outlet property="hintContainerView" destination="fHn-RJ-h5M" id="7aa-bf-oTQ"/>
                         <outlet property="imgNextSafeSpot" destination="qiw-dN-NxP" id="eSv-Pt-a8n"/>
                         <outlet property="imgSOS" destination="xFy-HV-4OF" id="NKW-I0-KjM"/>
                         <outlet property="imgShop" destination="nNs-GV-iah" id="UeE-cC-KmU"/>
                         <outlet property="mapView" destination="Xe9-Yt-TGg" id="dSS-Kn-Au0"/>
                         <outlet property="overlayView" destination="Zr4-Qj-fbT" id="o1b-pE-iJc"/>
+                        <outlet property="progressCircle" destination="BNY-7U-5gd" id="VSz-6l-lzJ"/>
                         <outlet property="shopViewBottomConstraint" destination="PD0-P4-UKP" id="C3N-ui-cuv"/>
                         <outlet property="sosContainerBottomConstraint" destination="ZSX-qI-gi2" id="xjI-9y-ynK"/>
                     </connections>
